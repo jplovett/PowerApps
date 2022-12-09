@@ -1,0 +1,22 @@
+
+
+Set(
+    vSelectedWeeklyEntry,
+    Patch(
+        'External Service Delivery Tracker',
+        Defaults('External Service Delivery Tracker'),
+        {
+            'Week Of Service': s0_WeekFridayDatePicker.SelectedDate,
+            'Created By Email': vCurrUser.Email,
+            FormVer: vFormVer,
+            Title: Trim(
+                First(
+                    Split(
+                        vCurrUser.FullName,
+                        "("
+                    )
+                ).Result
+            ) & "-" & s0_WeekFridayDatePicker.SelectedDate
+        }
+    )
+);

@@ -1,0 +1,15 @@
+First(
+    TrimEnds(
+        Split(
+            ThisItem.'Created By'.DisplayName,
+            "("
+        )
+    )
+).Result & ", " & ThisItem.Created & "/" & First(
+    TrimEnds(
+        Split(
+            ThisItem.'Modified By'.DisplayName,
+            "("
+        )
+    )
+).Result & ", " & ThisItem.Modified

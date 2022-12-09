@@ -1,0 +1,46 @@
+//First Day of Current Quarter
+With(
+    {rootdate: DateValue("01/01/1900")},
+    With(
+        {
+            qtrs: DateDiff(
+                rootdate,
+                Today(),
+                Quarters
+            )
+        },
+        DateAdd(
+            rootdate,
+            qtrs,
+            Quarters
+        )
+    )
+)
+
+//Last Day of Current Quarter
+With(
+    {rootdate: DateValue("01/01/1900")},
+    With(
+        {
+            qrtr: DateDiff(
+                rootdate,
+                Today(),
+                Quarters
+            ) + 1
+        },
+        With(
+            {
+                NxtQrtr: DateAdd(
+                    rootdate,
+                    qrtr,
+                    Quarters
+                )
+            },
+            DateAdd(
+                NxtQrtr,
+                -1,
+                Days
+            )
+        )
+    )
+)

@@ -1,0 +1,55 @@
+Patch(
+    'TA Request Management',
+    LookUp(
+        'TA Request Management',
+        ID = ThisItem.ID
+    ),
+    {
+        'Team Lead': {
+            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+            Claims: "i:0#.f|membership|" & cboTeamLead.Selected.Mail,
+            Department: "",
+            DisplayName: cboTeamLead.Selected.DisplayName,
+            Email: cboTeamLead.Selected.Mail,
+            JobTitle: "",
+            Picture: ""
+        }
+    }
+)
+
+
+// create a new record in test scores list
+Patch(
+     'Test Scores',
+     Defaults('Test Scores'),
+     {
+         TestName: txt_TestName.Text,
+         StudentName: txt_StudentName.Text,
+         Score: Value(txt_Score.Text)
+     }
+ );
+ If(
+     // check if there were any errors when the test score was submitted
+     !IsEmpty(Errors('Test Scores')),
+     // if true, show any error message
+     Notify(
+         "Test score submission failed",
+         NotificationType.Error
+     ),
+     // else, go to success screen
+     Navigate('Success Screen');
+ )
+
+UpdateContext(
+    {
+        CurrentUser: {
+            '@odata.type': "#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",
+            Claims: "i:0#.f|membership|" & Lower(vCurrUser.Email),
+            Department: "",
+            DisplayName: vCurrUser.FullName,
+            Email: vCurrUser.Email,
+            JobTitle: ".",
+            Picture: "."
+        }
+    }
+);

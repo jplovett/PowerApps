@@ -1,0 +1,117 @@
+{
+    Primary: RGBA(
+        0,
+        48,
+        87,
+        1
+    ),
+    Accent1: RGBA(
+        210,
+        39,
+        48,
+        1
+    ),
+    Accent2: RGBA(
+        226,
+        234,
+        242,
+        1
+    ),
+    Accent3: RGBA(
+        0,
+        153,
+        224,
+        1
+    ),
+    Accent4: RGBA(
+        84,
+        88,
+        89,
+        1
+    ),
+    CDCBlue: RGBA(
+        0,
+        51,
+        161,
+        1
+    ),
+    Primary1Light: RGBA(
+        25,
+        77,
+        133,
+        1
+    ),
+    Accent1Light: RGBA(
+        222,
+        93,
+        100,
+        1
+    ),
+    SuccessColor: RGBA(
+        141,
+        198,
+        63,
+        1
+    ),
+    CautionColor: RGBA(
+        255,
+        255,
+        224,
+        1
+    ),
+    WarningColor: RGBA(
+        252,
+        219,
+        2,
+        1
+    ),
+    ErrorColor: RGBA(
+        246,
+        88,
+        16,
+        1
+    ),
+    CriticalErrorColor: RGBA(
+        168,
+        0,
+        0,
+        1
+    ),
+    WhiteColor: RGBA(
+        255,
+        255,
+        255,
+        1
+    ),
+    LightGray: RGBA(
+        242,
+        242,
+        242,
+        1
+    ),
+    MediumGray: RGBA(
+        128,
+        128,
+        128,
+        1
+    ),
+    DarkGray: RGBA(
+        86,
+        86,
+        86,
+        1
+    ),
+    BlackColor: RGBA(
+        43,
+        43,
+        43,
+        1
+    ),
+    Clear: RGBA(
+        0,
+        0,
+        0,
+        0
+    ),
+    Dev: Green
+}

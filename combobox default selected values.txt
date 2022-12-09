@@ -1,0 +1,35 @@
+Combobox (PreparersCombo_s2) default selected items
+
+with items showing two columns:
+SortByColumns(ShowColumns(Filter('DSLR Staff','Travel Role'="Preparer"),"CDC_Email","Title"),"Title",Ascending)
+
+example default selected table value with same two columns:
+Table({Title:"Desiree Walker",CDC_Email:"pge8@cdc.gov"},{Title:"Corissa Fajardo",CDC_Email:"tgq6@cdc.gov"})
+
+populate text box with string of titles/names
+Left(
+    Concat(
+        PreparersCombo_s2.SelectedItems,
+        Title & ", "
+    ),
+    Len(
+        Concat(
+            PreparersCombo_s2.SelectedItems,
+            Title & ", "
+        )
+    ) - 2
+)
+
+populate text box with string of email addresses
+Left(
+    Concat(
+        PreparersCombo_s2.SelectedItems,
+        CDC_Email & "; "
+    ),
+    Len(
+        Concat(
+            PreparersCombo_s2.SelectedItems,
+            CDC_Email & "; "
+        )
+    ) - 2
+)

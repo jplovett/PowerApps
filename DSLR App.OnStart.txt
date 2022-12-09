@@ -1,0 +1,227 @@
+Set(
+    gvAppVer,
+    "v0.1i"
+);
+Set(
+    gvCurrUserEmail,
+    Lower(User().Email)
+);
+Set(
+    gvCurrUserName,
+    Office365Users.UserProfileV2(gvCurrUserEmail).givenName & " " & Office365Users.UserProfileV2(gvCurrUserEmail).surname
+);
+Set(
+    gvTextSize,
+    12
+);
+Set(
+    gvColors,
+    {
+        Primary1: RGBA(
+            0,
+            48,
+            87,
+            1
+        ),
+        Primary2: RGBA(
+            210,
+            39,
+            48,
+            1
+        ),
+        Primary3: RGBA(
+            226,
+            234,
+            242,
+            1
+        ),
+        Primary4: RGBA(
+            0,
+            153,
+            224,
+            1
+        ),
+        Primary5: RGBA(
+            84,
+            88,
+            89,
+            1
+        ),
+        CDCBlue: RGBA(
+            0,
+            51,
+            161,
+            1
+        ),
+        Primary1Light: RGBA(
+            25,
+            77,
+            133,
+            1
+        ),
+        Primary2Light: RGBA(
+            222,
+            93,
+            100,
+            1
+        ),
+        Primary3Light: RGBA(
+            186,
+            202,
+            226,
+            .2
+        ),
+        Primary3Fade: RGBA(
+            56,
+            96,
+            178,
+            .2
+        ),
+        SuccessColor: RGBA(
+            141,
+            198,
+            63,
+            1
+        ),
+        CautionColor: RGBA(
+            255,
+            255,
+            224,
+            1
+        ),
+        WarningColor: RGBA(
+            252,
+            219,
+            2,
+            1
+        ),
+        ErrorColor: RGBA(
+            246,
+            88,
+            16,
+            1
+        ),
+        CriticalErrorColor: RGBA(
+            168,
+            0,
+            0,
+            1
+        ),
+        WhiteColor: RGBA(
+            255,
+            255,
+            255,
+            1
+        ),
+        LightGray: RGBA(
+            242,
+            242,
+            242,
+            1
+        ),
+        MediumGray: RGBA(
+            128,
+            128,
+            128,
+            1
+        ),
+        DarkGray: RGBA(
+            86,
+            86,
+            86,
+            1
+        ),
+        BlackColor: RGBA(
+            43,
+            43,
+            43,
+            1
+        ),
+        Clear: RGBA(
+            0,
+            0,
+            0,
+            0
+        ),
+        Dev: Green
+    }
+);
+Set(
+    gvAppName,
+    "External Service Delivery"
+);
+Set(
+    gvIsDev,
+    gvCurrUserEmail = "nps9@cdc.gov"
+);
+Set(
+    gvIsAdmin,
+    gvCurrUserEmail = "sqf5@cdc.gov" Or gvCurrUserEmail = "gds2@cdc.gov"
+);
+Set(
+    gvFooter,
+    {
+        Background: gvColors.Primary1,
+        TextColor: gvColors.WhiteColor,
+        TextSize: gvTextSize,
+        LeftLabelText: "Program Implementation Branch - ESD",
+        CenterLabelText: gvCurrUserName & " (" & gvCurrUserEmail & ")",
+        RightLabelText: gvAppVer
+    }
+);
+ClearCollect(
+    colNavItems,
+    Table(
+        {
+            Title: "Home Screen",
+            Screen: 'Home Screen',
+            Icon: Icon.Home
+        },
+        {
+            Title: "Screen 2",
+            Screen: 'Screen 2',
+            Icon: Icon.Person
+        },
+        {
+            Title: "Screen 3",
+            Screen: 'Screen 3',
+            Icon: Icon.AddLibrary
+        }
+    )
+);
+ClearCollect(
+    colPIBStaff,
+    SortByColumns(
+        ShowColumns(
+            AddColumns(
+                Staff,
+                "Value",
+                Lower('Staff Person'.Email)
+            ),
+            "Title",
+            "Value"
+        ),
+        "Title",
+        Ascending
+    )
+);
+ClearCollect(
+    colDSLRStaff,
+    SortByColumns(
+        ShowColumns(
+            AddColumns(
+                'DSLR Staff',
+                "Value",
+                CDC_Email
+            ),
+            "Title",
+            "Value"
+        ),
+        "Title",
+        Ascending
+    )
+);
+Set(
+    gvDisplayNav,
+    false
+);

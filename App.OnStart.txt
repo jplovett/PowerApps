@@ -1,0 +1,183 @@
+Set(
+    gvAppVer,
+    "0.0a"
+);
+Set(
+    gvTextSize,
+    12
+);
+ClearCollect(
+    colColors,
+    {
+        Color: "Primary",
+        Detail: "CPR Dark Blue",
+        RGB: RGBA(
+            0,
+            48,
+            87,
+            1
+        ),
+        R_Nbr: 0,
+        G_Nbr: 48,
+        B_Nbr: 87,
+        A_Nbr: 1,
+        Web: "#003057",
+        Text: "White"
+    },
+    {
+        Color: "Accent1",
+        Detail: "CPR Red",
+        RGB: RGBA(
+            210,
+            39,
+            48,
+            1
+        ),
+        R_Nbr: 210,
+        G_Nbr: 39,
+        B_Nbr: 48,
+        A_Nbr: 1,
+        Web: "#d22730",
+        Text: "White"
+    },
+    {
+        Color: "Accent2",
+        Detail: "CPR Light Blue",
+        RGB: RGBA(
+            226,
+            234,
+            242,
+            1
+        ),
+        R_Nbr: 226,
+        G_Nbr: 234,
+        B_Nbr: 242,
+        A_Nbr: 1,
+        Web: "#e2eaf2",
+        Text: "Black"
+    },
+    {
+        Color: "Accent3",
+        Detail: "CPR Blue",
+        RGB: RGBA(
+            0,
+            153,
+            224,
+            1
+        ),
+        R_Nbr: 0,
+        G_Nbr: 153,
+        B_Nbr: 224,
+        A_Nbr: 1,
+        Web: "#00a3e0",
+        Text: "Both"
+    },
+    {
+        Color: "Accent4",
+        Detail: "CPR Gray",
+        RGB: RGBA(
+            84,
+            88,
+            89,
+            1
+        ),
+        R_Nbr: 84,
+        G_Nbr: 88,
+        B_Nbr: 89,
+        A_Nbr: 1,
+        Web: "#545859",
+        Text: "White"
+    },
+    {
+        Color: "CDCBlue",
+        Detail: "CDC Blue",
+        RGB: RGBA(
+            0,
+            51,
+            161,
+            1
+        ),
+        R_Nbr: 0,
+        G_Nbr: 51,
+        B_Nbr: 161,
+        A_Nbr: 1,
+        Web: "#00a3e0",
+        Text: "White"
+    },
+    {
+        Color: "MediumGray",
+        Detail: "Medium Gray",
+        RGB: RGBA(
+            151,
+            151,
+            151,
+            1
+        ),
+        R_Nbr: 151,
+        G_Nbr: 151,
+        B_Nbr: 151,
+        A_Nbr: 1,
+        Web: "#979797",
+        Text: "White"
+    },
+    {
+        Color: "LightGray",
+        Detail: "LightGray",
+        RGB: RGBA(
+            222,
+            222,
+            222,
+            1
+        ),
+        R_Nbr: 222,
+        G_Nbr: 222,
+        B_Nbr: 222,
+        A_Nbr: 1,
+        Web: "#dedede",
+        Text: "White"
+    }
+);
+Set(
+    gvTheme,
+    {
+        BorderColor: LookUp(colColors,Color = "Primary").RGB,
+        CheckboxBackgroundFill: White,
+        CheckmarkFill:LookUp(colColors,Color = "Primary").RGB,
+        ChevronBackground: LookUp(colColors,Color = "Primary").RGB,
+        ChevronFill: White,
+        ChevronHoverBackground: LookUp(colColors,Color = "Accent3").RGB,
+        Color: LookUp(colColors,Color = "Primary").RGB,
+        FalseFill: LookUp(colColors,Color = "Accent4").RGB,
+        Fill: White,
+        HandleFill: White,
+        HeadingColor: White,
+        HeadingFill: LookUp(colColors,Color = "Primary").RGB,
+        HoverColor: LookUp(colColors,Color = "Primary").RGB,
+        HoverFill: LookUp(colColors,Color = "Accent2").RGB,
+        IconBackground: LookUp(colColors,Color = "Primary").RGB,
+        IconFill: White,
+        PressedColor: White,
+        PressedFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        RailFill: LookUp(colColors,Color = "Accent4").RGB,
+        SelectedFill: LookUp(colColors,Color = "Accent2").RGB,
+        SelectionColor: White,
+        SelectionFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        SelectionTagColor: LookUp(colColors,Color = "Primary").RGB,
+        SelectionTagFill: LookUp(colColors,Color = "Accent2").RGB,
+        TrueFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        ValueFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        ValueHoverFill: LookUp(colColors,Color = "Accent3").RGB
+    }
+);
+Set(
+    gvCurrUserEmail,
+    User().Email
+);
+Set(
+    gvCurrUserName,
+    User().FullName
+);
+Set(
+    gvIsDev,
+    gvCurrUserEmail = "nps9@cdc.gov"
+);

@@ -1,0 +1,99 @@
+ClearCollect(
+    colColors,
+    {
+        Color: "Primary",
+        Detail: "CPR Dark Blue",
+        RGB: RGBA(
+            0,
+            48,
+            87,
+            1
+        ),
+        R_Nbr: 0,
+        G_Nbr: 48,
+        B_Nbr: 87,
+        A_Nbr: 1,
+        Web: "#003057",
+        Text: "White"
+    },
+    {
+        Color: "Accent1",
+        Detail: "CPR Red",
+        RGB: RGBA(
+            210,
+            39,
+            48
+            1
+        ),
+        R_Nbr: 210,
+        G_Nbr: 39,
+        B_Nbr: 48,
+        A_Nbr: 1,
+        Web: "#d22730",
+        Text: "White"
+    },
+    {
+        Color: "Accent2",
+        Detail: "CPR Light Blue",
+        RGB: RGBA(
+            226,
+            234,
+            242,
+            1
+        ),
+        R_Nbr: 226,
+        G_Nbr: 234,
+        B_Nbr: 242,
+        A_Nbr: 1,
+        Web: "#e2eaf2",
+        Text: "Black"
+    },
+    {
+        Color: "Accent3",
+        Detail: "CPR Blue",
+        RGB: RGBA(
+            0,
+            153,
+            224,
+            1
+        ),
+        R_Nbr: 0,
+        G_Nbr: 153,
+        B_Nbr: 224,
+        A_Nbr: 1,
+        Web: "#00a3e0",
+        Text: "Both"
+    },
+    {
+        Color: "Accent4",
+        Detail: "CPR Gray",
+        RGB: RGBA(
+            84,
+            88,
+            89,
+            1
+        ),
+        R_Nbr: 84,
+        G_Nbr: 88,
+        B_Nbr: 89,
+        A_Nbr: 1,
+        Web: "#545859",
+        Text: "White"
+    },
+    {
+        Color: "CDCBlue",
+        Detail: "CDC Blue",
+        RGB: RGBA(
+            0,
+            51,
+            161,
+            1
+        ),
+        R_Nbr: 0,
+        G_Nbr: 51,
+        B_Nbr: 161,
+        A_Nbr: 1,
+        Web: "#00a3e0",
+        Text: "White"
+    }
+)

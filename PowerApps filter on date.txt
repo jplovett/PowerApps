@@ -1,0 +1,29 @@
+ClearCollect(
+    collCurrRptQtr,
+    Filter(
+        collRptQtrs,
+        Value(
+            Text(
+                StartDate,
+                "yyyymmdd"
+            )
+        ) < Value(
+            Text(
+                Now(),
+                "yyyymmdd"
+            )
+        ),
+        Value(
+            Text(
+                EndDate,
+                "yyyymmdd"
+            )
+        ) > Value(
+            Text(
+                Now(),
+                "yyyymmdd"
+            )
+        )
+    );
+    
+);

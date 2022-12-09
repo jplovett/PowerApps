@@ -1,0 +1,1 @@
+body('Get_user_profile_(V2)')?['onPremisesExtensionAttributes']?['extensionAttribute5']

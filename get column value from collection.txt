@@ -1,0 +1,23 @@
+    Set(
+        vReqPIBTeam,
+        First(
+            Filter(
+                collPIBTeams,
+                Title = First(collReqPHEPContactItem).'PIB Team'
+            )
+        ).Title
+    );
+
+Get Column Value from a single item/row collection
+
+get True/False value from collection complex column:
+
+    Set(
+        vCurrUserTAReqPO,
+        CountRows(
+            Filter(
+                collReqPHEPContactItem,
+                PHEPSpec.Email = vCurrUser.Email
+            )
+        ) > 0
+    );

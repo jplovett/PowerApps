@@ -1,0 +1,113 @@
+Set(
+    gvTheme,
+    {
+        Primary1: RGBA(//CPR dark Blue (#003057)
+            0,
+            48,
+            87,
+            1
+        ),
+        Accent2: RGBA(//CPR red (#D22730)
+            210,
+            39,
+            48,
+            1
+        ),
+        Accent3: RGBA(//CPR light blue-gray (#E2EAF2)
+            226,
+            234,
+            242,
+            1
+        ),
+        Accent4: RGBA(//CPR blue (#0099E0)
+            0,
+            153,
+            224,
+            1
+        ),
+        Accent5: RGBA(//CPR dark gray (#545859)
+            84,
+            88,
+            89,
+            1
+        ),
+        CDCBlue: RGBA(//CDC blue (#0033A1)
+            0,
+            51,
+            161,
+            1
+        ),
+        TextMainColor: RGBA(//CDC blue
+            0,
+            48,
+            87,
+            1
+        ),
+        InputTextColor: RGBA(//CDC blue
+            0,
+            48,
+            87,
+            1
+        ),
+        TextLinkColor: RGBA(//CDC blue
+            0,
+            153,
+            224,
+            1
+        ),
+        Primary1Light: RGBA(//Light Blue Gray
+            25,
+            77,
+            133,
+            1
+        ),
+        Accent2Light: RGBA(//Light red 
+            222,
+            93,
+            100,
+            1
+        ),
+        ChevronHoverBackground: RGBA(//CPR dark Blue
+            0,
+            48,
+            87,
+            1
+        ),
+        MediumGray: RGBA(//Medium Gray
+            151,
+            151,
+            151,
+            1
+        ),
+        LightGray: RGBA(//Light Gray
+            222,
+            222,
+            222,
+            1
+        ),
+        SuccessColor: RGBA(//light green
+            48,
+            166,
+            103,
+            1
+        ),
+        CautionColor: RGBA(//light yellow
+            242,
+            242,
+            138,
+            1
+        ),
+        WarningColor: RGBA(//light red
+            222,
+            93,
+            100,
+            .4
+        ),
+        ErrorColor: RGBA(//dark red
+            210,
+            39,
+            48,
+            1
+        )
+    }
+);

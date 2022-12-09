@@ -1,0 +1,19 @@
+Office365Outlook.SendEmailV2(
+    "nps9@cdc.gov",
+    "IT Equipment Request - Approval Required",
+    "An I/T equipment request was made for a reject the request.",
+    {
+        ReplyTo: "DSLRITSupport@cdc.gov",
+        Cc: "nps9@cdc.gov",
+        Bcc: "nps9@cdc.gov",
+        From: "DSLRITSupport@cdc.gov",
+        Importance: "High"
+    }
+)
+
+
+ Office365Outlook.SendEmail(
+            gvBranchPreparerEmail,
+            "Travel Preparer New Travel Request",
+            "View Travel Request: https://apps.gov.powerapps.us/play/e/aec1a8c3-6fd0-4425-9b30-e18bfdabeabf/a/ec488ffa-ab99-4eea-9a32-3932971d0551?tenantId=9ce70869-60db-44fd-abe8-d2767077fc8f&source=portal&hidenavbar=true&restartApp=true&func=tr&TRID=" & gvSelectedTRID
+        );

@@ -1,0 +1,8 @@
+I have a screen with a gallery and a form. The form is, of course, supposed to display the selected gallery item, which I am storing in a variable. So the Item property of the form is set to varSelectedProject. 
+
+ 
+
+On the OnVisible property of the SCREEN, I set varSelectedProject as follows:
+
+
+Set(varSelectedProject,First(GalleryProjectFiles.AllItems))

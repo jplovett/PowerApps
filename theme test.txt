@@ -1,0 +1,44 @@
+gvColors.Primary 	- Dark Blude (CPR)
+gvColors.Accent1	- Dark Red (CPR)
+gvColors.Accent2	- Light Blue (CPR)
+gvColors.Accent3	- Blue (CPR)
+gvColors.Accent4	- Dark Gray (CPR)
+gvColors.CDCBlue	- CDC Blue
+gvColors.MediumGray	- Medium Gray (CPR)
+gvColors.LightGray	- Light Gray (CPR)
+gvColors.White		- RGBA(255,255,255,1)
+
+
+        BorderColor: LookUp(colColors,Color = "Primary").RGB,
+        Color: LookUp(colColors,Color = "Primary").RGB,
+        Fill: White,
+        HeadingColor: White,
+        HeadingFill: LookUp(colColors,Color = "Primary").RGB,
+        HoverColor: LookUp(colColors,Color = "Primary").RGB,
+        HoverFill: LookUp(colColors,Color = "Accent2").RGB,
+        PressedColor: White,
+        PressedFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        SelectedFill: LookUp(colColors,Color = "Accent2").RGB,
+        SelectionColor: White,
+        SelectionFill: LookUp(colColors,Color = "CDCBlue").RGB,
+
+        SelectionTagColor: LookUp(colColors,Color = "Primary").RGB,
+        SelectionTagFill: LookUp(colColors,Color = "Accent2").RGB,
+
+
+        TrueFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        ValueFill: LookUp(colColors,Color = "CDCBlue").RGB,
+        ValueHoverFill: LookUp(colColors,Color = "Accent3").RGB
+        CheckboxBackgroundFill: White,
+        CheckmarkFill:LookUp(colColors,Color = "Primary").RGB,
+        ChevronBackground: LookUp(colColors,Color = "Primary").RGB,
+        ChevronFill: White,
+        ChevronHoverBackground: LookUp(colColors,Color = "Accent3").RGB,
+        HandleFill: White,
+        IconBackground: LookUp(colColors,Color = "Primary").RGB,
+        IconFill: White,
+        RailFill: LookUp(colColors,Color = "Accent4").RGB,
+        FalseFill: LookUp(colColors,Color = "Accent4").RGB,
+
+
+RGBA(0, 18, 107, 1)
