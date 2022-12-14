@@ -1,0 +1,138 @@
+gvAppVer = "v0.1a";
+gvTextSize = 12;
+gvCurrUserEmail = Lower(User().Email);
+gvIsDev = If(
+    gvCurrUserEmail = "nps9@cdc.gov",
+    true,
+    false
+);
+gvColors = {
+    Primary: RGBA(// default-CPR dark Blue (0,48,87, 1 - #003057)
+        0,
+        48,
+        87,
+        1
+    ),
+    Accent1: RGBA(// d-CPR red (210,39,48, 1 - #D22730)
+        210,
+        39,
+        48,
+        1
+    ),
+    Accent2: RGBA(// d-CPR light blue-gray (226,234,242, 1 - #E2EAF2)
+        226,
+        234,
+        242,
+        1
+    ),
+    Accent3: RGBA(// d-CPR light blue (0,163,224, 1 - #00A3E0)
+        0,
+        163,
+        224,
+        1
+    ),
+    Accent4: RGBA(// d-CPR dark gray (84,88,89, 1 - #545859)
+        84,
+        88,
+        89,
+        1
+    ),
+    CDCBlue: RGBA(
+        0,
+        51,
+        161,
+        1
+    ),
+    Primary1Light: RGBA(
+        25,
+        77,
+        133,
+        1
+    ),
+    Accent1Light: RGBA(
+        222,
+        93,
+        100,
+        1
+    ),
+    SuccessColor: RGBA(
+        141,
+        198,
+        63,
+        1
+    ),
+    CautionColor: RGBA(
+        255,
+        255,
+        224,
+        1
+    ),
+    WarningColor: RGBA(
+        252,
+        219,
+        2,
+        1
+    ),
+    ErrorColor: RGBA(
+        246,
+        88,
+        16,
+        1
+    ),
+    CriticalErrorColor: RGBA(
+        168,
+        0,
+        0,
+        1
+    ),
+    WhiteColor: RGBA(
+        255,
+        255,
+        255,
+        1
+    ),
+    LightGray: RGBA(
+        242,
+        242,
+        242,
+        1
+    ),
+    MediumGray: RGBA(
+        128,
+        128,
+        128,
+        1
+    ),
+    DarkGray: RGBA(
+        86,
+        86,
+        86,
+        1
+    ),
+    BlackColor: RGBA(
+        43,
+        43,
+        43,
+        1
+    ),
+    Clear: RGBA(
+        0,
+        0,
+        0,
+        0
+    ),
+    Dev: Green
+};
+gvAppName = "DSLR App Name";
+gvAppTagline = "Division of State and Local Readiness";
+gvAppFooter = {
+    Background: gvColors.Primary,
+    TextColor: gvColors.WhiteColor,
+    TextSize: 12,
+    LeftLabelText: gvAppTagline,
+    CenterLabelText: Office365Users.UserProfileV2(gvCurrUserEmail).givenName & " " & Office365Users.UserProfileV2(gvCurrUserEmail).surname & "(" & gvCurrUserEmail & ")" & If(
+        gvIsDev,
+        " - dev"
+    ),
+    RightLabelText: gvAppVer
+};
