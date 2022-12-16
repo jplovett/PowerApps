@@ -1,113 +1,69 @@
 Set(
     gvTheme,
     {
-        Primary1: RGBA(//CPR dark Blue (#003057)
-            0,
-            48,
-            87,
-            1
-        ),
-        Accent2: RGBA(//CPR red (#D22730)
-            210,
-            39,
-            48,
-            1
-        ),
-        Accent3: RGBA(//CPR light blue-gray (#E2EAF2)
-            226,
-            234,
-            242,
-            1
-        ),
-        Accent4: RGBA(//CPR blue (#0099E0)
-            0,
-            153,
-            224,
-            1
-        ),
-        Accent5: RGBA(//CPR dark gray (#545859)
-            84,
-            88,
-            89,
-            1
-        ),
-        CDCBlue: RGBA(//CDC blue (#0033A1)
-            0,
-            51,
-            161,
-            1
-        ),
-        TextMainColor: RGBA(//CDC blue
-            0,
-            48,
-            87,
-            1
-        ),
-        InputTextColor: RGBA(//CDC blue
-            0,
-            48,
-            87,
-            1
-        ),
-        TextLinkColor: RGBA(//CDC blue
-            0,
-            153,
-            224,
-            1
-        ),
-        Primary1Light: RGBA(//Light Blue Gray
-            25,
-            77,
-            133,
-            1
-        ),
-        Accent2Light: RGBA(//Light red 
-            222,
-            93,
-            100,
-            1
-        ),
-        ChevronHoverBackground: RGBA(//CPR dark Blue
-            0,
-            48,
-            87,
-            1
-        ),
-        MediumGray: RGBA(//Medium Gray
-            151,
-            151,
-            151,
-            1
-        ),
-        LightGray: RGBA(//Light Gray
-            222,
-            222,
-            222,
-            1
-        ),
-        SuccessColor: RGBA(//light green
-            48,
-            166,
-            103,
-            1
-        ),
-        CautionColor: RGBA(//light yellow
-            242,
-            242,
-            138,
-            1
-        ),
-        WarningColor: RGBA(//light red
-            222,
-            93,
-            100,
-            .4
-        ),
-        ErrorColor: RGBA(//dark red
-            210,
-            39,
-            48,
-            1
-        )
+        app: {
+            name: "App Name",
+            tagLine: "app tag line (center, div, etc.)",
+            ver: "0.1a",
+            textSize: 12
+        },
+        currUser: {
+            email: Lower(User().Email),
+            name: Office365Users.UserProfileV2(User().Email).givenName & " " & Office365Users.UserProfileV2(User().Email).surname,
+            isDev: Lower(User().Email) = "nps9@cdc.gov"
+        },
+        palette: {
+            themePrimary: "#003057",
+            themeLighterAlt: "#cfdeeb",
+            themeLighter: "#a7c2d8",
+            themeLight: "#83a8c6",
+            themeTertiary: "#638fb3",
+            themeSecondary: "#4778a1",
+            themeDarkAlt: "#2f638e",
+            themeDark: "#1b507c",
+            themeDarker: "#0c3f69",
+            neutralLighterAlt: "#faf9f8",
+            neutralLighter: "#f3f2f1",
+            neutralLight: "#edebe9",
+            neutralQuaternaryAlt: "#e1dfdd",
+            neutralQuaternary: "#d0d0d0",
+            neutralTertiaryAlt: "#c8c6c4",
+            neutralTertiary: "#83a8c6",
+            neutralSecondary: "#638fb3",
+            neutralPrimaryAlt: "#4778a1",
+            neutralPrimary: "#003057",
+            neutralDark: "#1b507c",
+            black: "#0c3f69",
+            white: "#ffffff"
+        }
     }
+);
+ClearCollect(
+    colNav,
+    Table(
+        {
+            Icon: "PowerApps",
+            Label: "Power Apps",
+            Screen: HomeScreen,
+            Tooltip: "Power Apps Tooltip"
+        },
+        {
+            Icon: "PowerBILogo",
+            Label: "Power BI",
+            Screen: Screen1,
+            Tooltip: "Power BI Tooltip"
+        },
+        {
+            Icon: "PowerAutomateLogo",
+            Label: "Power Automate",
+            Screen: App.ActiveScreen,
+            Tooltip: "Power Automate Tooltip"
+        },
+        {
+            Icon: "Dataverse",
+            Label: "Dataverse",
+            Screen: App.ActiveScreen,
+            Tooltip: "Dataverse Tooltip"
+        }
+    )
 );
