@@ -1,0 +1,11 @@
+"<div style=' 
+transform: translate(-50%, -70%);
+position:absolute;
+top:50%;
+left:50%;
+margin:auto;
+box-shadow:rgba(0, 0, 0, 0.22) 0px 0.6px 7.6px 0px, rgba(0, 0, 0, 0.18) 0px 4.8px 14.4px 0px;
+border-radius:2px;padding:0;
+background:none" & ";width:" & Header.Width & "px;
+height:" & HeaderContainer.Height & 
+"px'></div>"
