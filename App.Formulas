@@ -1,138 +1,33 @@
-gvAppVer = "v0.1a";
-gvTextSize = 12;
-gvCurrUserEmail = Lower(User().Email);
-gvIsDev = If(
-    gvCurrUserEmail = "nps9@cdc.gov",
-    true,
-    false
-);
-gvColors = {
-    Primary: RGBA(// default-CPR dark Blue (0,48,87, 1 - #003057)
-        0,
-        48,
-        87,
-        1
-    ),
-    Accent1: RGBA(// d-CPR red (210,39,48, 1 - #D22730)
-        210,
-        39,
-        48,
-        1
-    ),
-    Accent2: RGBA(// d-CPR light blue-gray (226,234,242, 1 - #E2EAF2)
-        226,
-        234,
-        242,
-        1
-    ),
-    Accent3: RGBA(// d-CPR light blue (0,163,224, 1 - #00A3E0)
-        0,
-        163,
-        224,
-        1
-    ),
-    Accent4: RGBA(// d-CPR dark gray (84,88,89, 1 - #545859)
-        84,
-        88,
-        89,
-        1
-    ),
-    CDCBlue: RGBA(
-        0,
-        51,
-        161,
-        1
-    ),
-    Primary1Light: RGBA(
-        25,
-        77,
-        133,
-        1
-    ),
-    Accent1Light: RGBA(
-        222,
-        93,
-        100,
-        1
-    ),
-    SuccessColor: RGBA(
-        141,
-        198,
-        63,
-        1
-    ),
-    CautionColor: RGBA(
-        255,
-        255,
-        224,
-        1
-    ),
-    WarningColor: RGBA(
-        252,
-        219,
-        2,
-        1
-    ),
-    ErrorColor: RGBA(
-        246,
-        88,
-        16,
-        1
-    ),
-    CriticalErrorColor: RGBA(
-        168,
-        0,
-        0,
-        1
-    ),
-    WhiteColor: RGBA(
-        255,
-        255,
-        255,
-        1
-    ),
-    LightGray: RGBA(
-        242,
-        242,
-        242,
-        1
-    ),
-    MediumGray: RGBA(
-        128,
-        128,
-        128,
-        1
-    ),
-    DarkGray: RGBA(
-        86,
-        86,
-        86,
-        1
-    ),
-    BlackColor: RGBA(
-        43,
-        43,
-        43,
-        1
-    ),
-    Clear: RGBA(
-        0,
-        0,
-        0,
-        0
-    ),
-    Dev: Green
+gvAppVer="v0.1a";
+gvTextSize=12;
+gvCurrUserEmail=Lower(User().Email);
+gvIsDev=If(gvCurrUserEmail="nps9@cdc.gov", true , false );
+gvColors={
+Primary:RGBA(// default-CPR dark Blue 0,48,87, 1 - #003057
+LookUp('DSLR Colors',Title="Primary").R,LookUp('DSLR Colors',Title="Primary").G,LookUp('DSLR Colors',Title="Primary").B,1),Accent1:RGBA(
+// d-CPR red 210,39,48, 1 - #D22730
+LookUp('DSLR Colors',Title="Accent1").R,LookUp('DSLR Colors',Title="Accent1").G,LookUp('DSLR Colors',Title="Accent1").B,1),Accent2:RGBA(
+// d-CPR light blue-gray 226,234,242, 1 - #E2EAF2
+LookUp('DSLR Colors',Title="Accent2").R,LookUp('DSLR Colors',Title="Accent2").G,LookUp('DSLR Colors',Title="Accent2").B,1),Accent3:RGBA(
+// d-CPR light blue 0,153,224, 1 - #00A3E0
+LookUp('DSLR Colors',Title="Accent3").R,LookUp('DSLR Colors',Title="Accent3").G,LookUp('DSLR Colors',Title="Accent3").B,1),Accent4:RGBA(
+// d-CPR dark gray 84,88,89, 1 - #545859
+LookUp('DSLR Colors',Title="Accent4").R,LookUp('DSLR Colors',Title="Accent4").G,LookUp('DSLR Colors',Title="Accent4").B,1),CDCBlue:RGBA(
+// d-CDC Blue 0, 51, 161, 1 - #0033A1
+LookUp('DSLR Colors',Title="CDCBlue").R,LookUp('DSLR Colors',Title="CDCBlue").G,LookUp('DSLR Colors',Title="CDCBlue").B,1),SuccessColor:RGBA(
+// custom 141, 198, 63, 1 - #8dc63f
+LookUp('DSLR Colors',Title="SuccessColor").R,LookUp('DSLR Colors',Title="SuccessColor").G,LookUp('DSLR Colors',Title="SuccessColor").B,1),CautionColor:RGBA(
+// custom 255, 255, 224, 1 - #ffffe0
+LookUp('DSLR Colors',Title="CautionColor").R,LookUp('DSLR Colors',Title="CautionColor").G,LookUp('DSLR Colors',Title="CautionColor").B,1),WarningColor:RGBA(
+// custom 252, 219, 2, 1 - #fcdb02
+LookUp('DSLR Colors',Title="WarningColor").R,LookUp('DSLR Colors',Title="WarningColor").G,LookUp('DSLR Colors',Title="WarningColor").B,1),ErrorColor:RGBA(
+// custom 246, 88, 16, 1 - #f65810
+LookUp('DSLR Colors',Title="ErrorColor").R,LookUp('DSLR Colors',Title="ErrorColor").G,LookUp('DSLR Colors',Title="ErrorColor").B,1),WhiteColor:RGBA(
+//#fff
+LookUp('DSLR Colors',Title="WhiteColor").R,LookUp('DSLR Colors',Title="WhiteColor").G,LookUp('DSLR Colors',Title="WhiteColor").B,1),BlackColor:RGBA(
+//#000
+LookUp('DSLR Colors',Title="BlackColor").R,LookUp('DSLR Colors',Title="BlackColor").G,LookUp('DSLR Colors',Title="BlackColor").B,1),DevColor:RGBA(
+// custom 0, 118, 0, 1 - #007600
+LookUp('DSLR Colors',Title="DevColor").R,LookUp('DSLR Colors',Title="DevColor").G,LookUp('DSLR Colors',Title="DevColor").B,1)
 };
-gvAppName = "DSLR App Name";
-gvAppTagline = "Division of State and Local Readiness";
-gvAppFooter = {
-    Background: gvColors.Primary,
-    TextColor: gvColors.WhiteColor,
-    TextSize: 12,
-    LeftLabelText: gvAppTagline,
-    CenterLabelText: Office365Users.UserProfileV2(gvCurrUserEmail).givenName & " " & Office365Users.UserProfileV2(gvCurrUserEmail).surname & "(" & gvCurrUserEmail & ")" & If(
-        gvIsDev,
-        " - dev"
-    ),
-    RightLabelText: gvAppVer
-};
+gvAppName="DSLR Insider";
