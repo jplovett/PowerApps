@@ -1,0 +1,6 @@
+Launch(
+    "msteams://teams.microsoft.com/l/chat/0/0?users=" & "nps9@cdc.gov" & "&topicName=&message=Hi!",
+    {},
+    LaunchTarget.New
+)
+
