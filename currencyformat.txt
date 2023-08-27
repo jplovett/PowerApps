@@ -1,1 +1,2 @@
 Text(Value(Parent.Default), "[$-en-US]$###,###")
+Text(Value(Parent.Default), "[$-en-US]$###,###.00")
