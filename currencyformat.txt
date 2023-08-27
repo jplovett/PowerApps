@@ -1,2 +1,3 @@
-Text(Value(Parent.Default), "[$-en-US]$###,###")
-Text(Value(Parent.Default), "[$-en-US]$###,###.00")
+Text(Value(Parent.Default), "[$-en-US]$###,###"), no decimal or cents
+Text(Value(Parent.Default), "[$-en-US]$###,###.00"), include decimal
+Text(Value(Parent.Default), "[$-en-US]$###,##0.00"), less than $1
