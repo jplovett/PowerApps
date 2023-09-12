@@ -1,0 +1,108 @@
+// Using Theme Colors list in DSLR Data SP site
+Set(
+    gvColors,
+    {
+        Primary: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "Primary"
+            ).Hex
+        ),
+        Accent1: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "Accent1"
+            ).Hex
+        ),
+        Accent2: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "Accent2"
+            ).Hex
+        ),
+        Accent3: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "Accent3"
+            ).Hex
+        ),
+        Accent4: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "Accent4"
+            ).Hex
+        ),
+        CDCBlue: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "CDCBlue"
+            ).Hex
+        ),
+        LightGray: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "LightGray"
+            ).Hex
+        ),
+        MediumGray: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "MediumGray"
+            ).Hex
+        ),
+        DarkGray: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "DarkGray"
+            ).Hex
+        ),
+        WhiteColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "WhiteColor"
+            ).Hex
+        ),
+        BlackColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "BlackColor"
+            ).Hex
+        ),
+        SuccessColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "SuccessColor"
+            ).Hex
+        ),
+        CautionColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "CautionColor"
+            ).Hex
+        ),
+        WarningColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "WarningColor"
+            ).Hex
+        ),
+        ErrorColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "ErrorColor"
+            ).Hex
+        ),
+        DevColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "DevColor"
+            ).Hex
+        ),
+        EAColor: ColorValue(
+            LookUp(
+                'Theme Colors',
+                Detail = "EAColor"
+            ).Hex
+        )
+    }
+);
