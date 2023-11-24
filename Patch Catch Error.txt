@@ -1,0 +1,21 @@
+// create a new record in TR list
+Patch(
+     'Travel Requests',
+     Defaults('Travel Requests'),
+     {
+         ReqdField1: txt_TravelerName.Text,
+         ReqdField2: txt_TravelerEmail.Text,
+         ReqdField3: Value(txt_Cost.Text)
+     }
+);
+If(
+     // check if there were any errors when TR submitted
+     !IsEmpty(Errors('Travel Requests')),
+     // if true, show any error message
+     Notify(
+         "Travel request submission failed",
+         NotificationType.Error
+     ),
+     // else, go to success screen
+     Navigate('Success Screen');
+)
